@@ -1,33 +1,37 @@
 <?php include "db.php"; ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <hr>
-    <nav>
-        <a href="index.php">Home</a> |
-        <a href="view_user.php">View Users</a> |
-        <a href="register.php">Register User</a>
-    </nav>
-    </hr>
 
-    <h2>Register User</h2>
-    <form method="POST" action="">
-        <label>Name:</label><br>
-        <input type="text" name="name" required><br><br>
+    <div class="form-container">
+        <h2>Create Account</h2>
+        <form method="POST" action="">
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+            </div>
 
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            </div>
 
-        <label>Password:</label><br>
-        <input type="password" name="password" required><br><br>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Create a password" required>
+            </div>
 
-        <button type="submit" name="register">Register</button>
-    </form>
+            <button type="submit" name="register">Register</button>
+            <p class="login-link">Already have an account? <a href="login.php">Login here</a></p>
+        </form>
+    </div>
 
     <?php
     if (isset($_POST['register'])) {
@@ -38,7 +42,7 @@
         $sql = "INSERT INTO user_accounts (name, email, password) 
                 VALUES ('$name','$email','$password')";
         if ($conn->query($sql) === TRUE) {
-            echo "User registered successfully!";
+            echo "<script>alert('User registered successfully!');</script>";
         } else {
             echo "Error: " . $conn->error;
         }
