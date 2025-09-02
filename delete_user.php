@@ -9,4 +9,6 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error deleting user: " . $conn->error;
 }
+
+
 ?>

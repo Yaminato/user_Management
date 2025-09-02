@@ -8,6 +8,7 @@ $user = $result->fetch_assoc();
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="styles.css">
     <title>Update User</title>
 </head>
 <body>

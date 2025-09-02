@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="styles.css">
     <title>User Registration</title>
 </head>
 <body>
