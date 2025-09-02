@@ -23,16 +23,15 @@
     <!-- Dashboard Content -->
     <div class="dashboard">
         <h2>Welcome to System Management</h2>
-        <p>Select an action below to manage your users:</p>
 
         <div class="card-container">
             <a href="register.php" class="card">
-                <h3>➕ Register User</h3>
-                <p>Add a new user to the system.</p>
+                <h3>Register User</h3>
+                <p>Add a new user.</p>
             </a>
             <a href="view_user.php" class="card">
-                <h3>📋 View Users</h3>
-                <p>See all registered users and manage them.</p>
+                <h3>View Users</h3>
+                <p>See all registered users.</p>
             </a>
         </div>
     </div>
